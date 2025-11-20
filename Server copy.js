@@ -3,7 +3,6 @@
 import express from "express";
 import { createServer } from "node:http";
 
-
 // Criar aplicativo Express
 const app = express();
 
@@ -12,35 +11,25 @@ const server = createServer(app);
 
 // Rota de status
 app.get("/api/status", (req, res) => {
+    let nome = "Gilmario";
+    const idade = 30;
+    console.log('Olá, ${Gilmario}. Você tem ${40} anos.');
+    
+    let frutas = ["Maça", "Banana", "Melancia, Abacate, Acerola"];
+    console.log(frutas[2]);
+
+    for(let i = 0; i<3; i++){
+        console.log(frutas[i]);
+        
+    }
 
 
   res.json({ mensagem: "Servidor está rodando!" });
 });
-/*
-for(let i = 0; i <= 10; i++){
-  console.log(i)
-}
-*/
-const produtos = [
-  { nome: 'Notebook', preco: 2500 },
-  { nome: 'Mouse', preco: 50 },
-  { nome: 'Teclado', preco: 150 }
-];
-
-// forEach()
-produtos.forEach(produto => {
-  console.log(`Produto: ${produto.nome} - Preço: R$ ${produto.preco}`);
-//Map
-Map.forEach
-
-});
-
-
 
 
 // Iniciar servidor
 server.listen(3000, () => {
   console.log("Servidor rodando na porta 3000");
 });
-
 
