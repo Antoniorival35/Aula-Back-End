@@ -27,11 +27,19 @@ const produtos = [
   { nome: 'Teclado', preco: 150 }
 ];
 
-// forEach()
+// forEach() para exibir no console o nome e preço de cada produto.
 produtos.forEach(produto => {
   console.log(`Produto: ${produto.nome} - Preço: R$ ${produto.preco}`);
-//Map
-Map.forEach
+
+//Map para criar um novo array contendo apenas os nomes dos produtos.
+const nomes = produtos.map((produto) => produto.nome);
+console.log(nomes);
+
+//Map para criar um novo array com os preços acrescidos de 10%.
+const precosComAumento = produtos.map((produto) => produto.preco * 1.10);
+console.log(precosComAumento);
+
+
 
 });
 
